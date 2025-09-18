@@ -1,0 +1,92 @@
+# skippy-xd config file - andrian
+
+[system]
+pipePath = /tmp/skippy-xd-fifo
+updateFreq = 60.0
+clientList = XQueryTree
+pseudoTrans = true
+
+[layout]
+switchWaitDuration = 100
+animationDuration = 200
+distance = 50
+exposeLayout = boxy
+allowUpscale = false
+
+[filter]
+showOnlyCurrentMonitor = false
+showShadow = true
+showSticky = true
+switchShowAllDesktops = false
+exposeShowAllDesktops = false
+
+[display]
+background = /home/andrian/nixos-config/config/wallpaper.jpg
+preservePages = true
+movePointer = false
+includeFrame = true
+cornerRadius = 5
+showIconsOnThumbnails = true
+preferredIconSize = 48
+iconFillSpec = mid mid #333333
+fillSpec = #333333
+
+[normal]
+tint = black
+tintOpacity = 0
+opacity = 255
+
+[highlight]
+tint = #444444
+tintOpacity = 50
+opacity = 255
+
+[shadow]
+tint = #040404
+tintOpacity = 0
+opacity = 160
+
+[panel]
+show = true
+showDesktop = false
+backgroundTinting = true
+allowOverlap = true
+
+[tooltip]
+show = true
+showDesktop = false
+showMonitor = false
+offsetX = 0
+offsetY = -5
+width = 0.8
+border = #ffffff
+background = #404040
+opacity = 128
+text = #ffffff
+textShadow = black
+font = PT Sans Narrow:style=Regular
+
+[bindings]
+keysUp = Up
+keysDown = Down
+keysLeft = Left
+keysRight = Right
+
+keysSelect = Return space
+keysCancel = Escape
+keysNext = n
+keysPrev = p
+
+keysIconify = 1
+keysShade = 2
+keysClose = 3
+
+miwMouse1 = focus
+miwMouse2 = close-ewmh
+miwMouse3 = iconify
+miwMouse4 = keysNext
+miwMouse5 = keysPrev
+
+keysPivotSwitch = Alt_L
+keysPivotExpose =
+keysPivotPaging =

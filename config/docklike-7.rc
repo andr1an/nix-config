@@ -1,0 +1,9 @@
+[user]
+pinned=thunar;Alacritty;dev.zed.Zed;firefox;gvim;org.telegram.desktop;
+noWindowsListIfSingle=true
+showWindowCount=false
+middleButtonBehavior=2
+indicatorStyle=1
+inactiveIndicatorStyle=4
+indicatorOrientation=1
+indicatorColorFromTheme=true

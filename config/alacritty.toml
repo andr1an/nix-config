@@ -1,0 +1,60 @@
+# Alacritty config file - andrian
+[window]
+opacity = 0.95
+decorations = "full"
+dynamic_padding = true
+
+[window.dimensions]
+columns = 80
+lines = 25
+
+[window.padding]
+x = 4
+y = 4
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Fantasque Sans Mono"
+style = "Regular"
+
+[font.bold]
+family = "Fantasque Sans Mono"
+style = "Bold"
+
+[font.italic]
+family = "Fantasque Sans Mono"
+style = "Italic"
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[colors.primary]
+background = "#363958"
+foreground = "#b8c0e0"
+
+[colors.normal]
+black   = "#494d64"
+red     = "#ed8796"
+green   = "#a6da95"
+yellow  = "#eed49f"
+blue    = "#8aadf4"
+magenta = "#f5bde6"
+cyan    = "#8bd5ca"
+white   = "#b8c0e0"
+
+[colors.bright]
+black   = "#5b6078"
+red     = "#ed8796"
+green   = "#a6da95"
+yellow  = "#eed49f"
+blue    = "#8aadf4"
+magenta = "#f5bde6"
+cyan    = "#8bd5ca"
+white   = "#a5adcb"
