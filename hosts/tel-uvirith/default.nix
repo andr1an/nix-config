@@ -70,6 +70,8 @@
     longitude = 29.0;
   };
 
+  programs.fish.enable = true;
+
   programs.wireshark = {
     enable = true;
     package = pkgs.wireshark;
@@ -85,6 +87,7 @@
     extraGroups = ["networkmanager" "wheel" "wireshark"];
     isNormalUser = true;
     uid = 1000;
+    shell = pkgs.fish;
     packages = with pkgs; [
       # Command line
       fzf

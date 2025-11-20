@@ -12,10 +12,12 @@
 
   home.stateVersion = "25.05";
 
-  programs.bash = {
+  programs.fish = {
     enable = true;
+    shellInit = ''
+      set -g fish_greeting ""
+    '';
     shellAliases = {
-      la = "ls -lA";
       pbcopy = "xclip -selection clipboard";
       pbpaste = "xclip -selection clipboard -o";
       rebuild = "sudo nixos-rebuild switch --flake ~/nix-config";
@@ -25,17 +27,17 @@
   };
 
   home.file."touchegg" = {
-    target = "/.config/touchegg/touchegg.conf";
+    target = ".config/touchegg/touchegg.conf";
     source = ../config/touchegg.conf;
   };
 
   home.file."skippy-xd" = lib.mkIf (osConfig.services.xserver.desktopManager.xfce.enable or false) {
-    target = "/.config/skippy-xd/skippy-xd.rc";
+    target = ".config/skippy-xd/skippy-xd.rc";
     source = ../config/skippy-xd.rc;
   };
 
   home.file."docklike" = lib.mkIf (osConfig.services.xserver.desktopManager.xfce.enable or false) {
-    target = "/.config/xfce4/panel/docklike-7.rc";
+    target = ".config/xfce4/panel/docklike-7.rc";
     source = ../config/docklike-7.rc;
   };
 

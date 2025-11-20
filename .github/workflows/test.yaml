@@ -1,0 +1,34 @@
+name: Nix flake check
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "config/**"
+      - "**.md"
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - "config/**"
+      - "**.md"
+
+jobs:
+  checks:
+    name: Check expressions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Install nix
+        uses: cachix/install-nix-action@v31
+        with:
+          install_url: https://nixos.org/nix/install
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+
+      - name: Run Nix flake check
+        run: nix flake check --all-systems --verbose
