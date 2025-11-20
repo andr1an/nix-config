@@ -31,9 +31,9 @@
       "commands/custom/<Super>e" = "thunar";
     };
     "xfce4-desktop" = {
-      "backdrop/screen0/monitor0/image-path" = "${config.home.homeDirectory}/nixos-config/config/wallpaper.jpg";
-      "backdrop/screen0/monitor0/workspace0/last-image" = "${config.home.homeDirectory}/nixos-config/config/wallpaper.jpg";
-      "backdrop/screen0/monitoreDP-1/workspace0/last-image" = "${config.home.homeDirectory}/nixos-config/config/wallpaper.jpg";
+      "backdrop/screen0/monitor0/image-path" = "${config.home.homeDirectory}/nix-config/config/wallpaper.jpg";
+      "backdrop/screen0/monitor0/workspace0/last-image" = "${config.home.homeDirectory}/nix-config/config/wallpaper.jpg";
+      "backdrop/screen0/monitoreDP-1/workspace0/last-image" = "${config.home.homeDirectory}/nix-config/config/wallpaper.jpg";
     };
     "xfce4-panel" = {
       "panels" = [1 2];
@@ -103,7 +103,7 @@
       "plugins/plugin-11" = "separator";
 
       "plugins/plugin-12" = "directorymenu";
-      "plugins/plugin-12/base-directory" = "/home/andrian";
+      "plugins/plugin-12/base-directory" = "${config.home.homeDirectory}";
       "plugins/plugin-12/new-document" = false;
 
       "plugins/plugin-13" = "thunar-tpa";

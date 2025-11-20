@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./common.nix
     ./xfconf.nix
   ];
 
@@ -20,32 +21,6 @@
       rebuild = "sudo nixos-rebuild switch --flake ~/nix-config";
       nixos-list-generations = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
       gdrive-bisync = "rclone bisync -v gdrive: ~/\"Google Drive\"";
-    };
-  };
-
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-    settings = {
-      expandtab = true;
-      tabstop = 2;
-      shiftwidth = 2;
-      mouse = "a";
-    };
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "andr1an";
-    userEmail = "info@andrian.ninja";
-    aliases = {
-      st = "status";
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-      hist = "log --prety-format:\"%h %ad | %s%d [%an]\" --graph --date=short";
-      type = "cat-file -t";
-      dump = "cat-file -p";
     };
   };
 

@@ -1,7 +1,9 @@
 {pkgs, ...}: {
-  home.stateVersion = "25.05";
+  imports = [
+    ./common.nix
+  ];
 
-  programs.home-manager.enable = true;
+  home.stateVersion = "25.05";
 
   programs.ssh = {
     enable = true;
@@ -11,35 +13,6 @@
   };
 
   programs.gpg.enable = true;
-
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-    settings = {
-      expandtab = true;
-      tabstop = 2;
-      shiftwidth = 2;
-      mouse = "a";
-    };
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "andr1an";
-    userEmail = "info@andrian.ninja";
-    aliases = {
-      st = "status";
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-    };
-    lfs.enable = true;
-    extraConfig = {
-      push.default = "simple";
-      pull.rebase = true;
-      init.defaultBranch = "master";
-    };
-  };
 
   programs.fish = {
     enable = true;
