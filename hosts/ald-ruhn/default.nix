@@ -69,6 +69,7 @@
     shellcheck
     socat
     tmux
+    tree
     vim
     watch
     yq-go

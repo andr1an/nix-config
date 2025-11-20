@@ -51,6 +51,7 @@
     lsof
     ncdu
     dfc
+    tree
 
     # Hack
     nmap
