@@ -21,7 +21,7 @@ switchShowAllDesktops = false
 exposeShowAllDesktops = false
 
 [display]
-background = /home/andrian/nixos-config/config/wallpaper.jpg
+background = /home/andrian/nix-config/config/wallpaper.jpg
 preservePages = true
 movePointer = false
 includeFrame = true
