@@ -31,4 +31,4 @@ jobs:
             experimental-features = nix-command flakes
 
       - name: Run Nix flake check
-        run: nix flake check --all-systems --verbose
+        run: nix flake check --all-systems
