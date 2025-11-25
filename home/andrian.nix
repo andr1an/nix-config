@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   lib,
   osConfig,
@@ -13,10 +12,6 @@
   home.stateVersion = "25.05";
 
   programs.fish = {
-    enable = true;
-    shellInit = ''
-      set -g fish_greeting ""
-    '';
     shellAliases = {
       pbcopy = "xclip -selection clipboard";
       pbpaste = "xclip -selection clipboard -o";

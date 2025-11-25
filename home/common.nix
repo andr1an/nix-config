@@ -1,5 +1,12 @@
-{pkgs, ...}: {
+{
   programs.home-manager.enable = true;
+
+  programs.fish = {
+    enable = true;
+    shellInit = ''
+      set -g fish_greeting ""
+    '';
+  };
 
   programs.vim = {
     enable = true;

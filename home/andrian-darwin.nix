@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   imports = [
     ./common.nix
   ];
@@ -15,10 +15,6 @@
   programs.gpg.enable = true;
 
   programs.fish = {
-    enable = true;
-    shellInit = ''
-      set -g fish_greeting ""
-    '';
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake ~/nix-config";
     };
