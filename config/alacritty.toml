@@ -36,25 +36,33 @@ history = 10000
 multiplier = 3
 
 [colors.primary]
-background = "#363958"
-foreground = "#b8c0e0"
+foreground = "#d3c6aa"
+background = "#2d353b"
+
+[colors.cursor]
+text = "#2d353b"
+cursor = "#d3c6aa"
+
+[colors.selection]
+text = "#d3c6aa"
+background = "#414b51"
 
 [colors.normal]
-black   = "#494d64"
-red     = "#ed8796"
-green   = "#a6da95"
-yellow  = "#eed49f"
-blue    = "#8aadf4"
-magenta = "#f5bde6"
-cyan    = "#8bd5ca"
-white   = "#b8c0e0"
+black = "#343f44"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
 
 [colors.bright]
-black   = "#5b6078"
-red     = "#ed8796"
-green   = "#a6da95"
-yellow  = "#eed49f"
-blue    = "#8aadf4"
-magenta = "#f5bde6"
-cyan    = "#8bd5ca"
-white   = "#a5adcb"
+black = "#859289"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
