@@ -7,8 +7,11 @@
 
   programs.ssh = {
     enable = true;
-    addKeysToAgent = "yes";
-    controlMaster = "auto";
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      addKeysToAgent = "yes";
+      controlMaster = "auto";
+    };
     includes = ["~/.ssh/config.d/*"];
   };
 

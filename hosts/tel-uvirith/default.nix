@@ -98,7 +98,7 @@
       # Multimedia
       ffmpeg-full
       yt-dlp
-      stremio
+      # stremio
       imagemagick
       inkscape
       gimp3

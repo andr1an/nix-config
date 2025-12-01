@@ -21,22 +21,22 @@
 
   programs.git = {
     enable = true;
-    userName = "andr1an";
-    userEmail = "info@andrian.ninja";
     lfs.enable = true;
-    aliases = {
-      st = "status";
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-      hist = "log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short";
-      type = "cat-file -t";
-      dump = "cat-file -p";
-    };
-    extraConfig = {
+    settings = {
+      user.name = "andr1an";
+      user.email = "info@andrian.ninja";
       push.default = "simple";
       pull.rebase = true;
       init.defaultBranch = "master";
+      alias = {
+        st = "status";
+        co = "checkout";
+        br = "branch";
+        ci = "commit";
+        hist = "log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short";
+        type = "cat-file -t";
+        dump = "cat-file -p";
+      };
     };
   };
 }
