@@ -31,7 +31,12 @@
   environment.systemPackages = with pkgs; [
     cowsay
     fortune
+    gparted
+    libvirt
+    qemu_kvm
     rclone
+    signify
+    virt-manager
   ];
 
   services.printing.enable = true;
@@ -48,6 +53,11 @@
       Host *
         AddKeysToAgent yes
     '';
+  };
+
+  virtualisation.libvirtd = {
+    enable = true;
+    onBoot = "start";
   };
 
   services.pulseaudio.enable = false;
@@ -84,7 +94,7 @@
   users.users.andrian = {
     hashedPasswordFile = "/root/.passwd.andrian";
     description = "Sergey Andrianov";
-    extraGroups = ["networkmanager" "wheel" "wireshark"];
+    extraGroups = ["networkmanager" "wheel" "wireshark" "libvirtd"];
     isNormalUser = true;
     uid = 1000;
     shell = pkgs.fish;
