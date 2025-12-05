@@ -104,6 +104,7 @@
       "spotify"
       "stremio"
       "transmission"
+      "utm"
       "wireshark-app"
       "zed"
     ];
