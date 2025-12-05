@@ -39,4 +39,14 @@
       };
     };
   };
+
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      addKeysToAgent = "yes";
+      controlMaster = "auto";
+    };
+    includes = ["~/.ssh/config.d/*"];
+  };
 }

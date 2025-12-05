@@ -5,16 +5,6 @@
 
   home.stateVersion = "25.05";
 
-  programs.ssh = {
-    enable = true;
-    enableDefaultConfig = false;
-    matchBlocks."*" = {
-      addKeysToAgent = "yes";
-      controlMaster = "auto";
-    };
-    includes = ["~/.ssh/config.d/*"];
-  };
-
   programs.gpg.enable = true;
 
   programs.fish = {

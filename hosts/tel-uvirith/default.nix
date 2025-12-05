@@ -47,13 +47,7 @@
 
   programs.gnupg.agent.enable = true;
 
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      Host *
-        AddKeysToAgent yes
-    '';
-  };
+  programs.ssh.startAgent = true;
 
   virtualisation.libvirtd = {
     enable = true;
