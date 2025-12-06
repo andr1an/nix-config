@@ -6,6 +6,8 @@
     nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
@@ -29,76 +31,18 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nixpkgs-darwin,
-    nixpkgs-unstable,
-    nix-darwin,
-    nix-homebrew,
-    homebrew-core,
-    homebrew-cask,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    user = "andrian";
-    systems = [
-      "x86_64-linux"
-      "aarch64-darwin"
-    ];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+  outputs = inputs @ {flake-parts, ...}:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+      ];
 
-    nixosConfigurations = {
-      tel-uvirith = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          unstable = import inputs.nixpkgs-unstable {
-            system = "x86_64-linux";
-          };
-        };
-        modules = [
-          ./hosts/tel-uvirith
-          home-manager.nixosModules.home-manager
-        ];
-      };
+      imports = [
+        ./parts/formatter.nix
+        ./parts/nixos.nix
+        ./parts/darwin.nix
+        ./parts/home.nix
+      ];
     };
-
-    darwinConfigurations = {
-      ald-ruhn = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [
-          nix-homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              enable = true;
-              inherit user;
-              mutableTaps = false;
-              taps = {
-                "homebrew/homebrew-core" = homebrew-core;
-                "homebrew/homebrew-cask" = homebrew-cask;
-              };
-            };
-          }
-          ./hosts/ald-ruhn
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.andrian = import ./home/andrian-darwin.nix;
-          }
-        ];
-      };
-    };
-
-    homeConfigurations = {
-      "andrian@tel-uvirith" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/andrian.nix];
-      };
-    };
-  };
 }
