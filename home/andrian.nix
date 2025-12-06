@@ -5,8 +5,8 @@
   ...
 }: {
   imports = [
-    ./common.nix
-    ./xfconf.nix
+    ../modules/home-common.nix
+    ../modules/xfconf.nix
   ];
 
   home.stateVersion = "25.05";

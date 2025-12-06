@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ../common/users/andrian
+    ../../modules/common/users/andrian
   ];
 
   system.configurationRevision = config.rev or null;

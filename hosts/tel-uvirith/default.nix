@@ -5,15 +5,15 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../common
+    ../../modules/common
 
-    ../common/users/andrian
+    ../../modules/common/users/andrian
 
-    ../common/bluetooth.nix
-    ../common/desktop-xfce.nix
-    ../common/hardware-host.nix
-    ../common/hidpi-retina-mbp133.nix
-    ../common/trackpad-mpb.nix
+    ../../modules/common/bluetooth.nix
+    ../../modules/common/desktop-xfce.nix
+    ../../modules/common/hardware-host.nix
+    ../../modules/common/hidpi-retina-mbp133.nix
+    ../../modules/common/trackpad-mpb.nix
   ];
 
   system.stateVersion = "25.05";
