@@ -12,4 +12,9 @@
       rebuild = "sudo darwin-rebuild switch --flake ~/nix-config";
     };
   };
+
+  home.file."ghostty" = {
+    target = ".config/ghostty/config";
+    source = ../config/ghostty;
+  };
 }
