@@ -48,6 +48,7 @@
     bat
     btop
     cowsay
+    dfc
     fastfetch
     ffmpeg
     figlet
