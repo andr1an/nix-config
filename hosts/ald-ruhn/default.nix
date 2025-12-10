@@ -105,6 +105,7 @@
       "stremio"
       "transmission"
       "utm"
+      "veracrypt"
       "wireshark-app"
       "zed"
     ];
