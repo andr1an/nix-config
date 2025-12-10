@@ -1,6 +1,8 @@
 {
   pkgs,
   config,
+  user,
+  hostname,
   ...
 }: {
   imports = [
@@ -24,9 +26,9 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   networking = {
-    hostName = "ald-ruhn";
-    computerName = "ald-ruhn";
-    localHostName = "ald-ruhn";
+    hostName = "${hostname}";
+    computerName = "${hostname}";
+    localHostName = "${hostname}";
   };
 
   environment.variables = {
@@ -36,12 +38,12 @@
   environment.shells = [pkgs.fish];
   programs.fish.enable = true;
 
-  users.users.andrian = {
-    home = "/Users/andrian";
+  users.users.${user} = {
+    home = "/Users/${user}";
     shell = pkgs.fish;
   };
 
-  system.primaryUser = "andrian";
+  system.primaryUser = "${user}";
 
   environment.systemPackages = with pkgs; [
     alejandra

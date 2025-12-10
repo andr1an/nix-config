@@ -4,6 +4,10 @@ in {
   flake.darwinConfigurations = {
     ald-ruhn = inputs.nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
+      specialArgs = {
+        inherit user;
+        hostname = "ald-ruhn";
+      };
       modules = [
         inputs.nix-homebrew.darwinModules.nix-homebrew
         {
