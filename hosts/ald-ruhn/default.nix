@@ -142,4 +142,6 @@
     FXPreferredViewStyle = "Nlsv";
     FXRemoveOldTrashItems = true;
   };
+
+  system.defaults.NSGlobalDomain.AppleIconAppearanceTheme = "TintedAutomatic";
 }
