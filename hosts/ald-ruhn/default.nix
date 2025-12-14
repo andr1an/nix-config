@@ -143,5 +143,10 @@
     FXRemoveOldTrashItems = true;
   };
 
-  system.defaults.NSGlobalDomain.AppleIconAppearanceTheme = "TintedAutomatic";
+  system.defaults.NSGlobalDomain = {
+    AppleIconAppearanceTheme = "TintedAutomatic";
+    NSAutomaticCapitalizationEnabled = false;
+    NSAutomaticDashSubstitutionEnabled = false;
+    NSTableViewDefaultSizeMode = 1;
+  };
 }
