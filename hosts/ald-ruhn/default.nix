@@ -147,6 +147,6 @@
     AppleIconAppearanceTheme = "TintedAutomatic";
     NSAutomaticCapitalizationEnabled = false;
     NSAutomaticDashSubstitutionEnabled = false;
-    NSTableViewDefaultSizeMode = 1;
+    NSTableViewDefaultSizeMode = 2;
   };
 }
