@@ -16,12 +16,20 @@
     ../../modules/common/trackpad-mpb.nix
   ];
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.refind.enable = true;
+  boot.loader.grub.enable = false;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-fafb9049-d876-47a5-8603-5be5c3c49a84".device = "/dev/disk/by-uuid/fafb9049-d876-47a5-8603-5be5c3c49a84";
+  boot.initrd.luks.devices = {
+    root = {
+      device = "/dev/nvme0n1p3";
+      preLVM = true;
+    };
+  };
+
   networking.hostName = "tel-uvirith";
 
   networking.networkmanager.enable = true;
