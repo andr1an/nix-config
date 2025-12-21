@@ -104,6 +104,7 @@
       "obsidian"
       "openemu"
       "openmw"
+      "sonic-pi"
       "spotify"
       "stremio"
       "transmission"
