@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ../../modules/common
 
-    ../../modules/common/users/andrian
+    ../../modules/users/andrian
 
     ../../modules/common/bluetooth.nix
     ../../modules/common/desktop-xfce.nix

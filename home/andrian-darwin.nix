@@ -1,6 +1,6 @@
 {
   imports = [
-    ../modules/home-common.nix
+    ../modules/home/common
   ];
 
   home.stateVersion = "25.05";
