@@ -109,6 +109,7 @@
       "stremio"
       "transmission"
       "utm"
+      "vlc"
       "wireshark-app"
       "zed"
     ];
