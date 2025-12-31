@@ -18,10 +18,14 @@
 
   system.stateVersion = "25.11";
 
-  boot.loader.refind.enable = true;
   boot.loader.grub.enable = false;
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.refind = {
+    enable = true;
+    maxGenerations = 5;
+  };
 
   boot.initrd.luks.devices = {
     root = {
@@ -39,6 +43,7 @@
   environment.systemPackages = with pkgs; [
     cowsay
     fortune
+    figlet
     gparted
     libvirt
     qemu_kvm
