@@ -10,6 +10,7 @@
       "themes/custom/icons/func_reset.png" = ../../config/refind-theme-custom/icons/func_reset.png;
       "themes/custom/icons/func_shell.png" = ../../config/refind-theme-custom/icons/func_shell.png;
       "themes/custom/icons/func_shutdown.png" = ../../config/refind-theme-custom/icons/func_shutdown.png;
+      "themes/custom/icons/os_legacy.png" = ../../config/refind-theme-custom/icons/os_legacy.png;
       "themes/custom/icons/os_mac.png" = ../../config/refind-theme-custom/icons/os_mac.png;
       "themes/custom/icons/os_nixos.png" = ../../config/refind-theme-custom/icons/os_nixos.png;
       # Use os_nixos.png for os_linux.png
