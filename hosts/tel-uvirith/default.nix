@@ -14,6 +14,7 @@
     ../../modules/common/hardware-host.nix
     ../../modules/common/hidpi-retina-mbp133.nix
     ../../modules/common/trackpad-mpb.nix
+    ../../modules/refind
   ];
 
   system.stateVersion = "25.11";
@@ -101,7 +102,12 @@
   users.users.andrian = {
     hashedPasswordFile = "/root/.passwd.andrian";
     description = "Sergey Andrianov";
-    extraGroups = ["networkmanager" "wheel" "wireshark" "libvirtd"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "wireshark"
+      "libvirtd"
+    ];
     isNormalUser = true;
     uid = 1000;
     shell = pkgs.fish;
