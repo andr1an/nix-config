@@ -1,5 +1,7 @@
 {
   boot.loader.refind = {
+    enable = true;
+    maxGenerations = 5;
     extraConfig = ''
       include themes/custom/theme.conf
     '';

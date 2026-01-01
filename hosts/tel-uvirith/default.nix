@@ -9,11 +9,10 @@
 
     ../../modules/users/andrian
 
-    ../../modules/common/bluetooth.nix
-    ../../modules/common/desktop-xfce.nix
-    ../../modules/common/hardware-host.nix
-    ../../modules/common/hidpi-retina-mbp133.nix
-    ../../modules/common/trackpad-mpb.nix
+    ../../modules/bluetooth
+    ../../modules/desktop/xfce
+    ../../modules/hardware-host
+    ../../modules/macbook-nixos
     ../../modules/refind
   ];
 
@@ -22,11 +21,6 @@
   boot.loader.grub.enable = false;
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.refind = {
-    enable = true;
-    maxGenerations = 5;
-  };
 
   boot.initrd.luks.devices = {
     root = {

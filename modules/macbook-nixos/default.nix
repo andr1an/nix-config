@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   services.xserver = {
     dpi = 180;
     upscaleDefaultCursor = true;
@@ -11,4 +11,16 @@
   };
 
   services.xserver.displayManager.lightdm.greeters.gtk.cursorTheme.size = 36;
+
+  environment.systemPackages = with pkgs; [
+    touchegg
+    skippy-xd
+  ];
+
+  services.touchegg.enable = true;
+
+  services.libinput = {
+    enable = true;
+    touchpad.naturalScrolling = true;
+  };
 }
