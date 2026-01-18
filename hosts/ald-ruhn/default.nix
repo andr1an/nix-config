@@ -119,6 +119,7 @@
   environment.systemPath = [
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
+    "/Users/${user}/.lmstudio/bin"
   ];
 
   system.defaults.dock = {
