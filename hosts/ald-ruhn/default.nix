@@ -101,6 +101,7 @@
       "keepassxc"
       "keepingyouawake"
       "keka"
+      "lm-studio"
       "obsidian"
       "openemu"
       "openmw"
