@@ -107,7 +107,7 @@
       "openmw"
       "sonic-pi"
       "spotify"
-      "stremio"
+      # "stremio"
       "transmission"
       "utm"
       "vlc"
