@@ -25,6 +25,8 @@
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
+  nixpkgs.config.allowUnfree = true;
+
   networking = {
     hostName = "${hostname}";
     computerName = "${hostname}";
@@ -49,6 +51,7 @@
     alejandra
     bat
     btop
+    claude-code
     cowsay
     dfc
     fastfetch
