@@ -108,6 +108,7 @@
       "obsidian"
       "openemu"
       "openmw"
+      "orbstack"
       "sonic-pi"
       "spotify"
       # "stremio"
