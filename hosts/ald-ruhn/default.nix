@@ -12,15 +12,19 @@
   system.configurationRevision = config.rev or null;
   system.stateVersion = 6;
 
-  nix = {
-    enable = false; # Determinate Systems daemon handles it
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = [
-        "nix-command"
-        "flakes"
+  nix.enable = false; # Determinate Systems daemon handles it
+
+  determinateNix = {
+    enable = true;
+    customSettings = {
+      lazy-trees = true;
+      cores = 0;
+      trusted-users = [
+        "root"
+        "@admin"
       ];
     };
+    determinateNixd.garbageCollector.strategy = "automatic";
   };
 
   nixpkgs.hostPlatform = "aarch64-darwin";
@@ -62,6 +66,7 @@
     furnace
     fzf
     ghostscript
+    go
     htop
     imagemagick
     jq

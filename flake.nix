@@ -8,6 +8,8 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";

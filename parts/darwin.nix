@@ -9,6 +9,7 @@ in {
         hostname = "ald-ruhn";
       };
       modules = [
+        inputs.determinate.darwinModules.default
         inputs.nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
