@@ -7,12 +7,14 @@ on:
     paths-ignore:
       - "config/**"
       - "**.md"
+      - "**.txt"
   pull_request:
     branches:
       - master
     paths-ignore:
       - "config/**"
       - "**.md"
+      - "**.txt"
 
 jobs:
   checks:
@@ -31,4 +33,4 @@ jobs:
             experimental-features = nix-command flakes
 
       - name: Run Nix flake check
-        run: nix flake check --all-systems
+        run: nix flake check --all-systems --print-build-logs
