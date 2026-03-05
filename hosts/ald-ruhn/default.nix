@@ -84,7 +84,7 @@
     vim
     watch
     yq-go
-    yt-dlp
+    # yt-dlp
   ];
 
   fonts.packages = with pkgs; [
