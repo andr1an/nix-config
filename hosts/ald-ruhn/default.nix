@@ -101,6 +101,7 @@
       "audacity"
       "blender"
       "chatgpt"
+      "codex-app"
       "ghostty"
       "gimp"
       "google-drive"
