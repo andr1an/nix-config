@@ -5,6 +5,8 @@
     enable = true;
     shellInit = ''
       set -g fish_greeting ""
+      set -x OPENSPEC_TELEMETRY 0
+      set -x DO_NOT_TRACK 1
     '';
   };
 

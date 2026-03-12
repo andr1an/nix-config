@@ -3,6 +3,7 @@
   config,
   user,
   hostname,
+  openspec,
   ...
 }: {
   imports = [
@@ -55,6 +56,7 @@
     alejandra
     bat
     btop
+    cargo
     claude-code
     cowsay
     dfc
@@ -76,7 +78,10 @@
     nil
     nixd
     nmap
+    openspec
     python3
+    rustc
+    rustfmt
     shellcheck
     socat
     tmux

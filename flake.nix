@@ -22,6 +22,11 @@
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
+    openspec = {
+      url = "github:Fission-AI/OpenSpec";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;
