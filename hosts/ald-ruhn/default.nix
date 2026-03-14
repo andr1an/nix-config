@@ -136,6 +136,7 @@
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
     "/Users/${user}/.lmstudio/bin"
+    "/Applications/Ghostty.app/Contents/MacOS"
   ];
 
   system.defaults.dock = {
