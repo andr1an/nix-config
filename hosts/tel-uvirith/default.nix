@@ -2,7 +2,8 @@
   pkgs,
   unstable,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ../../modules/common
@@ -51,7 +52,7 @@
   services.fstrim.enable = true;
   services.mbpfan.enable = true;
 
-  security.sudo.package = pkgs.sudo.override {withInsults = true;};
+  security.sudo.package = pkgs.sudo.override { withInsults = true; };
 
   programs.gnupg.agent.enable = true;
 
@@ -127,14 +128,14 @@
 
       # Gaming
       openmw
-      fceux
+      unstable.fceux
 
       # System
       keepassxc
       (symlinkJoin {
         name = "pavucontrol-hidpi";
-        paths = [pkgs.pavucontrol];
-        buildInputs = [makeWrapper];
+        paths = [ pkgs.pavucontrol ];
+        buildInputs = [ makeWrapper ];
         postBuild = ''
           wrapProgram $out/bin/pavucontrol \
             --set GDK_SCALE 1 \
@@ -160,8 +161,8 @@
       unstable.zed-editor
       (symlinkJoin {
         name = "obsidian-with-scale";
-        paths = [obsidian];
-        buildInputs = [makeWrapper];
+        paths = [ obsidian ];
+        buildInputs = [ makeWrapper ];
         postBuild = ''
           # Wrap the code binary
           wrapProgram $out/bin/obsidian \
