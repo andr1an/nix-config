@@ -27,10 +27,6 @@ jobs:
       - name: Install nix
         uses: cachix/install-nix-action@v31
         with:
-          install_url: https://nixos.org/nix/install
-          extra_nix_config: |
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-            experimental-features = nix-command flakes
-
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Nix flake check
         run: nix flake check --all-systems --print-build-logs
