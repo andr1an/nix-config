@@ -11,6 +11,9 @@
 
   home.stateVersion = "25.05";
 
+  home.username = "andrian";
+  home.homeDirectory = "/home/andrian";
+
   programs.fish = {
     shellAliases = {
       pbcopy = "xclip -selection clipboard";
