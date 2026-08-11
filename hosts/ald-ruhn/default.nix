@@ -107,7 +107,6 @@
       "blender"
       "chatgpt"
       "claude"
-      "codex-app"
       "ghostty"
       "gimp"
       "google-drive"
