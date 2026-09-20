@@ -45,9 +45,9 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."*" = {
-      addKeysToAgent = "yes";
-      controlMaster = "auto";
+    settings."*" = {
+      AddKeysToAgent = "yes";
+      ControlMaster = "auto";
     };
     includes = ["~/.ssh/config.d/*"];
   };
