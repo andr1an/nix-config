@@ -57,6 +57,7 @@
   programs.gnupg.agent.enable = true;
 
   programs.ssh.startAgent = true;
+  services.gnome.gcr-ssh-agent.enable = false;
 
   virtualisation.libvirtd = {
     enable = true;
