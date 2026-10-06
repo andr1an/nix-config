@@ -7,7 +7,6 @@ in {
       specialArgs = {
         inherit user;
         hostname = "ald-ruhn";
-        openspec = inputs.openspec.packages.aarch64-darwin.default;
       };
       modules = [
         inputs.determinate.darwinModules.default

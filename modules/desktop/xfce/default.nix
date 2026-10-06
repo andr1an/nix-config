@@ -4,9 +4,9 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    xfce.xfce4-xkb-plugin
-    xfce.xfce4-sensors-plugin
-    xfce.xfce4-docklike-plugin
+    xfce4-xkb-plugin
+    xfce4-sensors-plugin
+    xfce4-docklike-plugin
     xclip
     xarchiver
     alacritty

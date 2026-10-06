@@ -3,7 +3,6 @@
   config,
   user,
   hostname,
-  openspec,
   ...
 }: {
   imports = [
@@ -78,7 +77,6 @@
     nil
     nixd
     nmap
-    openspec
     python3
     rustc
     rustfmt
