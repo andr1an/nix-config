@@ -115,7 +115,6 @@
       "keka"
       "lm-studio"
       "obsidian"
-      "openemu"
       "openmw"
       "orbstack"
       "sonic-pi"
