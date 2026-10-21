@@ -125,7 +125,7 @@
       audacity
       furnace
       mixxx
-      sonic-pi
+      #sonic-pi
 
       # Gaming
       openmw
