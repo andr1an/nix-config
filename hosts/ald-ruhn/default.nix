@@ -148,6 +148,7 @@
       "/Applications/Ghostty.app"
       "/Applications/Zed.app"
       "/Applications/Obsidian.app"
+      "/Applications/Claude.app"
       "/Applications/ChatGPT.app"
       "/Applications/Spotify.app"
       "/System/Applications/System Settings.app"
